@@ -10,7 +10,7 @@ set ttyfast
 
 execute pathogen#infect()
 
-source prefs/nerdtree.vim
+source ~/.vim/prefs/nerdtree.vim
 
 " ------[ Gestion de la barre de statut ] ----------------------------------------------
 
