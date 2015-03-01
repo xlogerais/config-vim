@@ -1,0 +1,212 @@
+# Initialize new git repo
+
+        git init ~/.vim
+
+# Create initial directory structure
+
+        cd ~/.vim && mkdir autoload plugin ftdetect ftplugin indent syntax spell colors
+
+# Create initial config files
+
+        touch ~/.vim/vimrc
+        touch ~/.vim/gvimrc
+        touch ~/.vim/vimpagerrc
+
+# Create symlinks into home directory so they are used, while the files are left with the rest of vim config
+
+        ln -sf ~/.vim/vimrc ~/.vimrc
+        ln -sf ~/.vim/gvimrc ~/.gvimrc
+        ln -sf ~/.vim/vimpagerrc ~/.vimpagerrc
+
+# Create on first minimal configuration
+
+        echo '' >> ~/.vim/vimrc
+        echo "\" ------ [ Gestion des options ] ----------------------------------------------" >> ~/.vim/vimrc
+        echo "\" We don't want vi compatibility." >> ~/.vim/vimrc
+        echo 'set nocompatible' >> ~/.vim/vimrc
+        echo '' >> ~/.vim/vimrc
+
+        echo "\" we have a fast terminal" >> ~/.vim/vimrc
+        echo 'set ttyfast' >> ~/.vim/vimrc
+        echo '' >> ~/.vim/vimrc
+
+        echo '' >> ~/.vim/vimrc
+        echo "\" ------ [ Gestion de la coloration syntaxique ] ----------------------------------------------" >> ~/.vim/vimrc
+        echo 'syntax on' >> ~/.vim/vimrc
+        echo '' >> ~/.vim/vimrc
+
+# First commit
+
+        cd ~/.vim
+        git add vimrc
+        git add gvimrc
+        git add vimpagerrc
+        git commit -m "Create initial directory structure and configuration files"
+
+# Spell dictionaries
+
+        cd ~/.vim/spell
+        wget http://ftp.vim.org/vim/runtime/spell/fr.latin1.spl
+        wget http://ftp.vim.org/vim/runtime/spell/fr.latin1.sug
+        wget http://ftp.vim.org/vim/runtime/spell/fr.utf-8.spl
+        wget http://ftp.vim.org/vim/runtime/spell/fr.utf-8.sug
+
+        echo '' >> ~/.vim/vimrc
+        echo "\" ------ [ Gestion de la correction d'orthographe ] ----------------------------------------------" >> ~/.vim/vimrc
+        echo 'setlocal nospell' >> ~/.vim/vimrc
+        echo 'setlocal spelllang=fr' >> ~/.vim/vimrc
+        echo '' >> ~/.vim/vimrc
+
+        cd ~/.vim
+        git add vimrc
+        git add spell
+        git commit -m "Add french spell dictionaries"
+
+# Colorschemes
+
+        # Ambient colorscheme
+        curl --silent --show-error --location --output ~/.vim/colors/ambient.vim http://www.vim.org/scripts/download_script.php?src_id=16989
+        git add ~/.vim/colors/ambient.vim
+        git commit ~/.vim/colors/ambient.vim -m "Add ambient colorscheme"
+
+        # Zenburn colorscheme
+        curl --silent --show-error --location --output ~/.vim/colors/zenburn.vim http://www.vim.org/scripts/download_script.php?src_id=15530
+        git add ~/.vim/colors/zenburn.vim
+        git commit ~/.vim/colors/zenburn.vim -m "Add zenburn colorscheme"
+
+        # Darkburn colorscheme
+        curl --silent --show-error --location --output ~/.vim/colors/darkburn.vim http://www.vim.org/scripts/download_script.php?src_id=10756
+        git add ~/.vim/colors/darkburn.vim
+        git commit ~/.vim/colors/darkburn.vim -m "Add darkburn colorscheme"
+
+
+        # Xoria256 colorscheme
+        curl --silent --show-error --location --output ~/.vim/colors/xoria256.vim http://www.vim.org/scripts/download_script.php?src_id=15762
+        git add ~/.vim/colors/xoria256.vim
+        git commit ~/.vim/colors/xoria256.vim -m "Add xoria256 colorscheme"
+
+        # Mustang colorscheme (mustang customization for nerdtree)
+        curl --silent --show-error --location --output ~/.vim/colors/mustang.vim https://github.com/croaker/mustang-vim/raw/master/colors/mustang.vim
+        git add ~/.vim/colors/mustang.vim
+        git commit ~/.vim/colors/mustang.vim -m "Add mustang colorscheme"
+
+# Add pathogen
+
+        mkdir -p ~/.vim/autoload ~/.vim/bundle
+        curl --silent --show-error --location --output ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+        git add ~/.vim/autoload/pathogen.vim
+
+        echo '' >> ~/.vim/vimrc
+        echo "\" ------ [ Gestion des plugins ] ----------------------------------------------" >> ~/.vim/vimrc
+        echo "execute pathogen#infect()" >> ~/.vim/vimrc
+        echo '' >> ~/.vim/vimrc
+        #filetype plugin indent on
+
+        git commit -m "Add pathogen module (to easily manage modules)"
+
+# Add base plugins from tpope
+
+        # Add Plugin commentary
+        cd ~/.vim
+        git submodule add git://github.com/tpope/vim-commentary.git bundle/commentary
+        git add .
+        git commit -m "Install commentary.vim bundle as a submodule."
+
+        # Add Plugin surround
+        cd ~/.vim
+        git submodule add git://github.com/tpope/vim-surround.git bundle/surround
+        git add .
+        git commit -m "Install surround.vim bundle as a submodule."
+
+        # Add Plugin speeddating
+        cd ~/.vim
+        git submodule add git://github.com/tpope/vim-speeddating.git bundle/speeddating
+        git add .
+        git commit -m "Install speeddating.vim bundle as a submodule."
+
+        # Add Plugin repeat
+        cd ~/.vim
+        git submodule add git://github.com/tpope/vim-repeat.git bundle/repeat
+        git add .
+        git commit -m "Install repeat.vim bundle as a submodule."
+
+# Add some usefull tools
+
+        # Add Plugin nerdtree (filebrowser)
+        cd ~/.vim
+        git submodule add git://github.com/scrooloose/nerdtree.git bundle/nerdtree
+        git add .
+        git commit -m "Install nerdtree.vim bundle as a submodule."
+
+        # Add Plugin fugitive (to use git features in vim)
+        cd ~/.vim
+        git submodule add git://github.com/tpope/vim-fugitive.git bundle/fugitive
+        git add .
+        git commit -m "Install fugitive.vim bundle as a submodule."
+
+# Add plugins for ruby
+
+        # Add Plugin ruby
+        cd ~/.vim
+        git submodule add git://github.com/vim-ruby/vim-ruby.git bundle/ruby
+        git add .
+        git commit -m "Install ruby module in bundle as a submodule"
+
+        # Add Plugin rbenv
+        cd ~/.vim
+        git submodule add git://github.com/tpope/vim-rbenv.git bundle/rbenv
+        git add .
+        git commit -m "Install rbenv.vim bundle as a submodule."
+
+        # Add Plugin rake
+        cd ~/.vim
+        git submodule add git://github.com/tpope/vim-rake.git bundle/rake
+        git add .
+        git commit -m "Install rake.vim bundle as a submodule."
+
+        # Add Plugin bundler
+        cd ~/.vim
+        git submodule add git://github.com/tpope/vim-bundler.git bundle/bundler
+        git add .
+        git commit -m "Install bundler.vim bundle as a submodule."
+
+        # Add Plugin rails
+        cd ~/.vim
+        git submodule add git://github.com/tpope/vim-rails.git bundle/rails
+        git add .
+        git commit -m "Install rails.vim bundle as a submodule."
+
+	# Add Plugin haml
+	git submodule add git://github.com/tpope/vim-haml.git ~/.vim/bundle/haml
+	git add .
+	git commit -m "Install haml.vim bundle as a submodule."
+
+# Add more nice colorschemes
+
+	# Solarized colorscheme
+	git submodule add git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/solarized
+	git add .
+	git commit -m "Install solarized colorscheme as a bundle submodule."
+
+# Add Puppet support
+#cd ~/.vim
+#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/ftdetect/puppet.vim ~/.vim/ftdetect/puppet.vim
+#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/ftplugin/puppet.vim ~/.vim/ftplugin/puppet.vim
+#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/indent/puppet.vim ~/.vim/indent/puppet.vim
+#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/syntax/puppet.vim ~/.vim/syntax/puppet.vim
+
+##### Send to github
+git remote add github https://github.com/xlogerais/config-vim.git
+
+######### Languages
+
+# PHP
+# let php_sql_query = 1 "Coloration des requetes SQL
+# let php_htmlInStrings = 1 "Coloration des balises HTML
+
+# RUBY
+
+# PYTHON
+
+# PERL
+
