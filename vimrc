@@ -56,6 +56,16 @@ set statusline+=Position:[%l/%L\ (%p%%)]
 " occasions to show status line, 2=always.
 set laststatus=2
 
+" ------[ Gestion du fichier viminfo ] ----------------------------------------------
+
+" Tell vim to remember certain things when we exit
+"  '10  :  marks will be remembered for up to 10 previously edited files
+"  "100 :  will save up to 100 lines for each register
+"  :100 :  up to 100 lines of command-line history will be remembered
+"  %    :  saves and restores the buffer list
+"  n... :  where to save the viminfo files
+set viminfo='10,\"100,:100,%,n~/.vim/viminfo
+
 " ------ [ Gestion de la coloration syntaxique ] ----------------------------------------------
 syntax on
 
