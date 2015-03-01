@@ -15,3 +15,7 @@ syntax on
 setlocal nospell
 setlocal spelllang=fr
 
+
+" ------ [ Gestion des plugins ] ----------------------------------------------
+execute pathogen#infect()
+
