@@ -87,3 +87,24 @@ syntax on
 setlocal nospell
 setlocal spelllang=fr
 
+" ------[ Gestion des types de fichiers ] ----------------------------------------------
+
+" Automatically detect file types.
+filetype on
+filetype indent on
+
+"misc
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+
+"ruby
+autocmd BufNewFile,BufRead *Capfile* set filetype=ruby
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
