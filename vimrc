@@ -114,7 +114,7 @@ if     (&term =~ 'xterm')
 	set termencoding=utf-8
 	set t_Co=256
 	set mouse=a
-	colorscheme mustangpp
+	colorscheme mustang
 elseif (&term =~ 'rxvt')
 	set termencoding=utf-8
 	set t_Co=256
@@ -128,7 +128,7 @@ elseif (&term =~ 'screen-256color')
 	set termencoding=utf-8
 	set t_Co=256
 	set mouse=a
-	colorscheme mustangpp
+	colorscheme mustang
 elseif (&term =~ 'screen')
 	set termencoding=utf-8
 	set t_Co=16
