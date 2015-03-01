@@ -66,6 +66,20 @@ set laststatus=2
 "  n... :  where to save the viminfo files
 set viminfo='10,\"100,:100,%,n~/.vim/viminfo
 
+" ------[ Restauration de la position du curseur ] ----------------------------------------------
+
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
 " ------ [ Gestion de la coloration syntaxique ] ----------------------------------------------
 syntax on
 
