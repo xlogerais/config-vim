@@ -154,3 +154,10 @@ endfunction
 map <F2> :call PasteToggle()<CR>
 imap <F2> <c-o>:call PasteToggle()<CR>
 set pastetoggle=<F2>
+
+" ------[ Mapping ] ----------------------------------------------
+let mapleader = ","
+
+map <Leader>ve :edit ~/.vimrc<CR>
+map <Leader>ne :edit ~/.notes<CR>
+map <Leader>te :edit ~/.todo-perso<CR>
