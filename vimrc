@@ -10,6 +10,8 @@ set ttyfast
 
 execute pathogen#infect()
 
+source prefs/nerdtree.vim
+
 " ------[ Gestion de la barre de statut ] ----------------------------------------------
 
 " Display title
@@ -124,20 +126,19 @@ elseif (&term =~ 'rxvt')
 	map <C-down> :tabl<cr>
 	map <C-t><left> :tabp<cr>
 	map <C-t><right> :tabn<cr>
-elseif (&term =~ 'screen-256color')
-	set termencoding=utf-8
-	set t_Co=256
-	set mouse=a
-	colorscheme mustang
 elseif (&term =~ 'screen')
 	set termencoding=utf-8
 	set t_Co=16
 	set background=dark
 	colorscheme zenburn
+elseif (&term =~ 'screen-256color')
+	set termencoding=utf-8
+	set t_Co=256
+	set mouse=a
+	colorscheme mustang
 elseif (&term =~ 'linux')
 	set termencoding=utf-8
 	set t_Co=16
-	set nocursorline
 else
 	set termencoding=utf-8
 	set t_Co=16
