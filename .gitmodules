@@ -19,3 +19,6 @@
 [submodule "bundle/ruby"]
 	path = bundle/ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/rbenv"]
+	path = bundle/rbenv
+	url = git://github.com/tpope/vim-rbenv.git
