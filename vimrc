@@ -143,3 +143,14 @@ else
 	set termencoding=utf-8
 	set t_Co=16
 endif
+
+" ------[ Paste ] ----------------------------------------------
+
+function! PasteToggle()
+  set invpaste
+  set paste?
+endfunction
+
+map <F2> :call PasteToggle()<CR>
+imap <F2> <c-o>:call PasteToggle()<CR>
+set pastetoggle=<F2>
