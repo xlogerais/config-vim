@@ -108,3 +108,37 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
+" ------[ Gestion des types de terminaux ] ----------------------------------------------
+
+if     (&term =~ 'xterm')
+	set termencoding=utf-8
+	set t_Co=256
+	set mouse=a
+	colorscheme mustangpp
+elseif (&term =~ 'rxvt')
+	set termencoding=utf-8
+	set t_Co=256
+	set mouse=a
+	colorscheme mustang
+	map <C-up> :tabr<cr>
+	map <C-down> :tabl<cr>
+	map <C-t><left> :tabp<cr>
+	map <C-t><right> :tabn<cr>
+elseif (&term =~ 'screen-256color')
+	set termencoding=utf-8
+	set t_Co=256
+	set mouse=a
+	colorscheme mustangpp
+elseif (&term =~ 'screen')
+	set termencoding=utf-8
+	set t_Co=16
+	set background=dark
+	colorscheme zenburn
+elseif (&term =~ 'linux')
+	set termencoding=utf-8
+	set t_Co=16
+	set nocursorline
+else
+	set termencoding=utf-8
+	set t_Co=16
+endif
