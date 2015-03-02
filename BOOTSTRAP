@@ -107,25 +107,25 @@
 
         # Add Plugin commentary
         cd ~/.vim
-        git submodule add git://github.com/tpope/vim-commentary.git bundle/commentary
+        git submodule add https://github.com/tpope/vim-commentary.git bundle/commentary
         git add .
         git commit -m "Install commentary.vim bundle as a submodule."
 
         # Add Plugin surround
         cd ~/.vim
-        git submodule add git://github.com/tpope/vim-surround.git bundle/surround
+        git submodule add https://github.com/tpope/vim-surround.git bundle/surround
         git add .
         git commit -m "Install surround.vim bundle as a submodule."
 
         # Add Plugin speeddating
         cd ~/.vim
-        git submodule add git://github.com/tpope/vim-speeddating.git bundle/speeddating
+        git submodule add https://github.com/tpope/vim-speeddating.git bundle/speeddating
         git add .
         git commit -m "Install speeddating.vim bundle as a submodule."
 
         # Add Plugin repeat
         cd ~/.vim
-        git submodule add git://github.com/tpope/vim-repeat.git bundle/repeat
+        git submodule add https://github.com/tpope/vim-repeat.git bundle/repeat
         git add .
         git commit -m "Install repeat.vim bundle as a submodule."
 
@@ -133,13 +133,13 @@
 
         # Add Plugin nerdtree (filebrowser)
         cd ~/.vim
-        git submodule add git://github.com/scrooloose/nerdtree.git bundle/nerdtree
+        git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree
         git add .
         git commit -m "Install nerdtree.vim bundle as a submodule."
 
         # Add Plugin fugitive (to use git features in vim)
         cd ~/.vim
-        git submodule add git://github.com/tpope/vim-fugitive.git bundle/fugitive
+        git submodule add https://github.com/tpope/vim-fugitive.git bundle/fugitive
         git add .
         git commit -m "Install fugitive.vim bundle as a submodule."
 
@@ -147,37 +147,37 @@
 
         # Add Plugin ruby
         cd ~/.vim
-        git submodule add git://github.com/vim-ruby/vim-ruby.git bundle/ruby
+        git submodule add https://github.com/vim-ruby/vim-ruby.git bundle/ruby
         git add .
         git commit -m "Install ruby module in bundle as a submodule"
 
         # Add Plugin rbenv
         cd ~/.vim
-        git submodule add git://github.com/tpope/vim-rbenv.git bundle/rbenv
+        git submodule add https://github.com/tpope/vim-rbenv.git bundle/rbenv
         git add .
         git commit -m "Install rbenv.vim bundle as a submodule."
 
         # Add Plugin rake
         cd ~/.vim
-        git submodule add git://github.com/tpope/vim-rake.git bundle/rake
+        git submodule add https://github.com/tpope/vim-rake.git bundle/rake
         git add .
         git commit -m "Install rake.vim bundle as a submodule."
 
         # Add Plugin bundler
         cd ~/.vim
-        git submodule add git://github.com/tpope/vim-bundler.git bundle/bundler
+        git submodule add https://github.com/tpope/vim-bundler.git bundle/bundler
         git add .
         git commit -m "Install bundler.vim bundle as a submodule."
 
         # Add Plugin rails
         cd ~/.vim
-        git submodule add git://github.com/tpope/vim-rails.git bundle/rails
+        git submodule add https://github.com/tpope/vim-rails.git bundle/rails
         git add .
         git commit -m "Install rails.vim bundle as a submodule."
 
 	# Add Plugin haml
         cd ~/.vim
-	git submodule add git://github.com/tpope/vim-haml.git bundle/haml
+	git submodule add https://github.com/tpope/vim-haml.git bundle/haml
 	git add .
 	git commit -m "Install haml.vim bundle as a submodule."
 
@@ -185,7 +185,7 @@
 
 	# Solarized colorscheme
         cd ~/.vim
-	git submodule add git://github.com/altercation/vim-colors-solarized.git bundle/solarized
+	git submodule add https://github.com/altercation/vim-colors-solarized.git bundle/solarized
 	git add .
 	git commit -m "Install solarized colorscheme as a bundle submodule."
 
