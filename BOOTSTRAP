@@ -107,13 +107,15 @@
 
         git commit -m "Add pathogen module (to easily manage modules)"
 
-# Add base plugins from tpope
+# Add some base plugins
 
-        # Add Plugin commentary
+        # Add Plugin matchit
         cd ~/.vim
-        git submodule add https://github.com/tpope/vim-commentary.git bundle/commentary
+        git submodule add https://github.com/tmhedberg/matchit.git bundle/matchit
         git add .
-        git commit -m "Install commentary.vim bundle as a submodule."
+        git commit -m "Install matchit.vim bundle as a submodule."
+
+# Add more base plugins from tpope
 
         # Add Plugin surround
         cd ~/.vim
@@ -121,25 +123,29 @@
         git add .
         git commit -m "Install surround.vim bundle as a submodule."
 
-        # Add Plugin speeddating
-        cd ~/.vim
-        git submodule add https://github.com/tpope/vim-speeddating.git bundle/speeddating
-        git add .
-        git commit -m "Install speeddating.vim bundle as a submodule."
-
         # Add Plugin repeat
         cd ~/.vim
         git submodule add https://github.com/tpope/vim-repeat.git bundle/repeat
         git add .
         git commit -m "Install repeat.vim bundle as a submodule."
 
-# Add more plugins
-
-        # Add Plugin matchit
+        # Add Plugin commentary
         cd ~/.vim
-        git submodule add https://github.com/tmhedberg/matchit.git bundle/matchit
+        git submodule add https://github.com/tpope/vim-commentary.git bundle/commentary
         git add .
-        git commit -m "Install matchit.vim bundle as a submodule."
+        git commit -m "Install commentary.vim bundle as a submodule."
+
+        # Add Plugin speeddating
+        cd ~/.vim
+        git submodule add https://github.com/tpope/vim-speeddating.git bundle/speeddating
+        git add .
+        git commit -m "Install speeddating.vim bundle as a submodule."
+
+        # Add Plugin git
+        cd ~/.vim
+        git submodule add https://github.com/tpope/vim-git.git bundle/git
+        git add .
+        git commit -m "Install git.vim bundle as a submodule."
 
 # Add some usefull tools
 
