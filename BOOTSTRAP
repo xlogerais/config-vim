@@ -133,6 +133,14 @@
         git add .
         git commit -m "Install repeat.vim bundle as a submodule."
 
+# Add more plugins
+
+        # Add Plugin matchit
+        cd ~/.vim
+        git submodule add https://github.com/tmhedberg/matchit.git bundle/matchit
+        git add .
+        git commit -m "Install matchit.vim bundle as a submodule."
+
 # Add some usefull tools
 
         # Add Plugin nerdtree (filebrowser)
