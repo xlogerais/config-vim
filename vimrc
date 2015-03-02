@@ -156,6 +156,6 @@ set pastetoggle=<F2>
 " ------[ Mapping ] ----------------------------------------------
 let mapleader = ","
 
-map <Leader>ve :edit ~/.vimrc<CR>
-map <Leader>ne :edit ~/.notes<CR>
-map <Leader>te :edit ~/.todo-perso<CR>
+map <Leader>ve :tabedit ~/.vimrc<CR>
+map <Leader>ne :tabedit ~/.notes<CR>
+map <Leader>te :tabedit ~/.todo<CR>
