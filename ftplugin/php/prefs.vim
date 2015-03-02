@@ -2,6 +2,7 @@
 
 " show cursor
 setlocal cursorline cursorcolumn
+hi CursorLine term=none cterm=none
 
 " show line numbers
 setlocal number numberwidth=4
