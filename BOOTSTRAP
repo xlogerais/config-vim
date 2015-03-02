@@ -100,7 +100,6 @@
         echo "\" ------ [ Gestion des plugins ] ----------------------------------------------" >> ~/.vim/vimrc
         echo "execute pathogen#infect()" >> ~/.vim/vimrc
         echo '' >> ~/.vim/vimrc
-        #filetype plugin indent on
 
         git commit -m "Add pathogen module (to easily manage modules)"
 
@@ -177,6 +176,7 @@
         git commit -m "Install rails.vim bundle as a submodule."
 
 	# Add Plugin haml
+        cd ~/.vim
 	git submodule add git://github.com/tpope/vim-haml.git bundle/haml
 	git add .
 	git commit -m "Install haml.vim bundle as a submodule."
@@ -184,6 +184,7 @@
 # Add more nice colorschemes
 
 	# Solarized colorscheme
+        cd ~/.vim
 	git submodule add git://github.com/altercation/vim-colors-solarized.git bundle/solarized
 	git add .
 	git commit -m "Install solarized colorscheme as a bundle submodule."
