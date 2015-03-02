@@ -91,9 +91,9 @@ setlocal spelllang=fr
 
 " ------[ Gestion des types de fichiers ] ----------------------------------------------
 
-" Automatically detect file types.
-filetype on
-filetype indent on
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
 
 "misc
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
