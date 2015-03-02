@@ -79,6 +79,10 @@
         git add ~/.vim/colors/darkburn.vim
         git commit ~/.vim/colors/darkburn.vim -m "Add darkburn colorscheme"
 
+        # Atom colorscheme
+        curl --silent --show-error --location --output ~/.vim/colors/atom.vim http://www.vim.org/scripts/download_script.php?src_id=15570
+        git add ~/.vim/colors/atom.vim
+        git commit ~/.vim/colors/atom.vim -m "Add atom colorscheme"
 
         # Xoria256 colorscheme
         curl --silent --show-error --location --output ~/.vim/colors/xoria256.vim http://www.vim.org/scripts/download_script.php?src_id=15762
