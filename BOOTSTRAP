@@ -20,20 +20,30 @@
 
 # Create on first minimal configuration
 
-        echo '' >> ~/.vim/vimrc
-        echo "\" ------ [ Gestion des options ] ----------------------------------------------" >> ~/.vim/vimrc
+        echo "" >> ~/.vim/vimrc
+        echo "\" ----- [ Gestion des options ] --------------------------------------------------------" >> ~/.vim/vimrc
         echo "\" We don't want vi compatibility." >> ~/.vim/vimrc
-        echo 'set nocompatible' >> ~/.vim/vimrc
-        echo '' >> ~/.vim/vimrc
+        echo "set nocompatible" >> ~/.vim/vimrc
+        echo "" >> ~/.vim/vimrc
 
+        echo "" >> ~/.vim/vimrc
         echo "\" we have a fast terminal" >> ~/.vim/vimrc
-        echo 'set ttyfast' >> ~/.vim/vimrc
-        echo '' >> ~/.vim/vimrc
+        echo "set ttyfast" >> ~/.vim/vimrc
+        echo "" >> ~/.vim/vimrc
 
-        echo '' >> ~/.vim/vimrc
-        echo "\" ------ [ Gestion de la coloration syntaxique ] ----------------------------------------------" >> ~/.vim/vimrc
-        echo 'syntax on' >> ~/.vim/vimrc
-        echo '' >> ~/.vim/vimrc
+        echo "" >> ~/.vim/vimrc
+        echo "\" ----- [ Gestion des types de fichiers ] ----------------------------------------------" >> ~/.vim/vimrc
+        echo "" >> ~/.vim/vimrc
+        echo "filetype on           \" Enable filetype detection" >> ~/.vim/vimrc
+        echo "filetype indent on    \" Enable filetype-specific indenting" >> ~/.vim/vimrc
+        echo "filetype plugin on    \" Enable filetype-specific plugins" >> ~/.vim/vimrc
+        echo "" >> ~/.vim/vimrc
+
+        echo "" >> ~/.vim/vimrc
+        echo "\" ----- [ Gestion de la coloration syntaxique ] ----------------------------------------" >> ~/.vim/vimrc
+        echo "" >> ~/.vim/vimrc
+        echo "syntax on" >> ~/.vim/vimrc
+        echo "" >> ~/.vim/vimrc
 
 # First commit
 
@@ -52,7 +62,7 @@
         wget http://ftp.vim.org/vim/runtime/spell/fr.utf-8.sug
 
         echo '' >> ~/.vim/vimrc
-        echo "\" ------ [ Gestion de la correction d'orthographe ] ----------------------------------------------" >> ~/.vim/vimrc
+        echo "\" ----- [ Gestion de la correction d'orthographe ] -------------------------------------" >> ~/.vim/vimrc
         echo 'setlocal nospell' >> ~/.vim/vimrc
         echo 'setlocal spelllang=fr' >> ~/.vim/vimrc
         echo '' >> ~/.vim/vimrc
@@ -101,7 +111,7 @@
         git add ~/.vim/autoload/pathogen.vim
 
         echo '' >> ~/.vim/vimrc
-        echo "\" ------ [ Gestion des plugins ] ----------------------------------------------" >> ~/.vim/vimrc
+        echo "\" ----- [ Gestion des plugins ] --------------------------------------------------------" >> ~/.vim/vimrc
         echo "execute pathogen#infect()" >> ~/.vim/vimrc
         echo '' >> ~/.vim/vimrc
 
@@ -207,13 +217,6 @@
 	git add .
 	git commit -m "Install solarized colorscheme as a bundle submodule."
 
-# Add Puppet support
-#cd ~/.vim
-#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/ftdetect/puppet.vim ~/.vim/ftdetect/puppet.vim
-#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/ftplugin/puppet.vim ~/.vim/ftplugin/puppet.vim
-#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/indent/puppet.vim ~/.vim/indent/puppet.vim
-#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/syntax/puppet.vim ~/.vim/syntax/puppet.vim
-
 ##### Send to github
 git remote add github https://github.com/xlogerais/config-vim.git
 
@@ -228,4 +231,11 @@ git remote add github https://github.com/xlogerais/config-vim.git
 # PYTHON
 
 # PERL
+
+# Add Puppet support
+#cd ~/.vim
+#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/ftdetect/puppet.vim ~/.vim/ftdetect/puppet.vim
+#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/ftplugin/puppet.vim ~/.vim/ftplugin/puppet.vim
+#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/indent/puppet.vim ~/.vim/indent/puppet.vim
+#ln -s /home/xlogerais/.gem/ruby/1.9.1/gems/puppet-2.7.19/ext/vim/syntax/puppet.vim ~/.vim/syntax/puppet.vim
 
