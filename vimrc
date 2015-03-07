@@ -10,7 +10,7 @@ set ttyfast
 
 execute pathogen#infect()
 
-" ------[ Gestion de la barre de statut ] ----------------------------------------------
+" ------[ Gestion de la barre de statut ] -------------------------------------
 
 " Display title
 set title
@@ -56,7 +56,7 @@ set statusline+=Position:[%l/%L\ (%p%%)]
 " occasions to show status line, 2=always.
 set laststatus=2
 
-" ------[ Gestion du fichier viminfo ] ----------------------------------------------
+" ------[ Gestion du fichier viminfo ] ----------------------------------------
 
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
@@ -66,7 +66,7 @@ set laststatus=2
 "  n... :  where to save the viminfo files
 set viminfo='10,\"100,:100,%,n~/.vim/viminfo
 
-" ------[ Restauration de la position du curseur ] ----------------------------------------------
+" ------[ Restauration de la position du curseur ] ----------------------------
 
 function! ResCur()
   if line("'\"") <= line("$")
@@ -80,14 +80,14 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
-" ------ [ Gestion de la coloration syntaxique ] ----------------------------------------------
+" ------ [ Gestion de la coloration syntaxique ] ------------------------------
 syntax on
 
-" ------ [ Gestion de la correction d'orthographe ] ----------------------------------------------
+" ------ [ Gestion de la correction d'orthographe ] ---------------------------
 setlocal nospell
 setlocal spelllang=fr
 
-" ------[ Gestion des types de fichiers ] ----------------------------------------------
+" ------[ Gestion des types de fichiers ] -------------------------------------
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
