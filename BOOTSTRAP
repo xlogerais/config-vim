@@ -125,6 +125,12 @@
         git add .
         git commit -m "Install matchit.vim bundle as a submodule."
 
+        # Add Plugin tabular
+        cd ~/.vim
+        git submodule add https://github.com/tmhedberg/godlygeek/tabular.git bundle/tabular
+        git add .
+        git commit -m "Install tabular.vim bundle as a submodule."
+
 # Add more base plugins from tpope
 
         # Add Plugin surround
@@ -208,6 +214,14 @@
 	git submodule add https://github.com/tpope/vim-haml.git bundle/haml
 	git add .
 	git commit -m "Install haml.vim bundle as a submodule."
+
+# Add plugins for puppet
+
+        # Add Plugin vim-puppet
+        cd ~/.vim
+        git submodule add https://github.com/rodjek/vim-puppet.git bundle/vim-puppet
+        git add .
+        git commit -m "Install vim-puppet plugin as a submodule."
 
 # Add more nice colorschemes
 
