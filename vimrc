@@ -152,3 +152,8 @@ let mapleader = ","
 map <Leader>ve :tabedit ~/.vimrc<CR>
 map <Leader>ne :tabedit ~/.notes<CR>
 map <Leader>te :tabedit ~/.todo<CR>
+
+
+" ------[ Vim Airline ] ----------------------------------------------
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
