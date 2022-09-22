@@ -108,6 +108,11 @@ if     (&term =~ 'xterm')
 	set t_Co=256
 	set mouse=a
 	colorscheme mustang
+if     (&term =~ 'kitty')
+	set termencoding=utf-8
+	set t_Co=256
+	set mouse=a
+	colorscheme mustang
 elseif (&term =~ 'rxvt')
 	set termencoding=utf-8
 	set t_Co=256
