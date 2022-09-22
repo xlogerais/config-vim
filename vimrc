@@ -108,7 +108,7 @@ if     (&term =~ 'xterm')
 	set t_Co=256
 	set mouse=a
 	colorscheme mustang
-if     (&term =~ 'kitty')
+elseif  (&term =~ 'kitty')
 	set termencoding=utf-8
 	set t_Co=256
 	set mouse=a
